@@ -53,7 +53,7 @@ int main()
 			exit(0);
 		}
 		printf("\n----- MENU -----\n");
-		printf("Credits left: %d\n", credits);
+		printf("Credits: %d\n", credits);
 		printf("\t1: Start\n");
 		printf("\t2: Rules and rewards\n");
 		printf("\t0: Exit\n");
