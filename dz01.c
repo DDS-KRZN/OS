@@ -16,7 +16,15 @@ int lotery(credits){
 	printf("%d\t", a2);
 	a3 = rand()%8;
 	printf("%d\n", a3);
-	if (((a1 == a2)&&(a2 == a3)) && ((a1!=6)&&(a2!=6)&&(a3!=6))) // esli combinatsia odinakova`a i net 666
+	if (a1==6 && a2==6 && a3==6)		// esli 666
+	{
+		printf("Your lose! -300 credits\n\a");
+		credits-=300;
+	} else if (a1==7 && a2==7 && a3==7)		// esli 777
+	{
+		printf("Jackpot!\n\a");
+		exit(0);
+	} else if ((a1 == a2)&&(a2 == a3)) // esli combinatsia odinakova`a
 	{
 		printf("Your win! +500 credits\n\a");
 		credits+=500;		
@@ -28,15 +36,7 @@ int lotery(credits){
 	{
 		printf("Your win! +200 credits\n\a");
 		credits+=200;
-	} else if (a1==6 && a2==6 && a3==6)		// esli 666
-	{
-		printf("Your lose! -300 credits\n\a");
-		credits-=300;
-	} else if (a1==7 && a2==7 && a3==7)		// esli 777
-	{
-		printf("Jackpot!\n\a");
-		exit(0);
-	}
+	} 
 	return credits;
 }
 
