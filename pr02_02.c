@@ -27,7 +27,6 @@ int main()
 		sum_arr += arr[i];
 		printf("%d\t", arr[i]);
 	}
-	printf("\nSum: %d\n", sum_arr);
 	average_arr = (sum_arr)/(n);
 	printf("\nAverage: %d\n", average_arr);
 
